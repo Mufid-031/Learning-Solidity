@@ -16,5 +16,25 @@
     "hardhat": "^3.1.4",
     "mocha": "^11.7.5",
     "typescript": "~5.8.0"
+  },
+  "scripts": {
+    "build": "hardhat compile",
+    "clean": "hardhat clean",
+
+    "node": "hardhat node",
+
+    "deploy:all": "hardhat run scripts/deploy-all.ts --network localhost",
+    "deploy": "hardhat deploy",
+    "deploy:sepolia": "hardhat run scripts/deploy-with-ethers.ts --network sepolia",
+
+    "ignite:local": "hardhat ignition deploy ignition/modules/Counter.ts --network localhost",
+    "ignite:sepolia": "hardhat ignition deploy ignition/modules/Counter.ts --network sepolia",
+
+    "test": "hardhat test",
+    "test:watch": "hardhat test --watch",
+
+    "console": "hardhat console --network localhost",
+
+    "check": "npm run build && npm run test"
   }
 }
