@@ -23,4 +23,13 @@ contract Types {
   uint public angka2 = 1;
 
   uint32 public ui_data = 5_01_2021;
+
+  uint8 result;
+
+  function add() public {
+    // result = 3/5;
+    result = 3.5 + 1.5;
+  }
+
+
 }
